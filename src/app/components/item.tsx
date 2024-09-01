@@ -7,6 +7,7 @@ import Button from './button'
 
 import { FaArrowDown, FaArrowUp, FaTrash } from 'react-icons/fa'
 import { IItemProps } from '@/interface/components/item'
+import { style } from '../utils/style'
 
 const Item = ({
   title,
@@ -30,35 +31,35 @@ const Item = ({
       <div>
         <h2 className="text-base md:text-xl">{title}</h2>
         <div className="mt-2">
-          <p className="text-[10px] md:text-xs">Quantidade: {quantity}</p>
-          <p className="text-[10px] md:text-xs">Preço: R$ {pricing}</p>
+          <p className={style.descriptionItem}>Quantidade: {quantity}</p>
+          <p className={style.descriptionItem}>Preço: R$ {pricing}</p>
         </div>
       </div>
       {removeProductsAllProductsList && (
         <Button
           buttonIcon
           onClick={() => removeProductsAllProductsList(id)}
-          className="ml-auto rounded-md bg-red-950 p-2 md:p-4"
+          className={`ml-auto bg-red-950 ${style.buttonIcon}`}
         >
-          <FaTrash color="white" className="h-3 w-3 md:h-5 md:w-5" />
+          <FaTrash color="white" className={style.icon} />
         </Button>
       )}
       {transferProductToCurrentList && (
         <Button
           buttonIcon
           onClick={() => transferProductToCurrentList(id)}
-          className="rounded-md bg-green-950 p-2 md:p-4"
+          className={`bg-green-950 ${style.buttonIcon}`}
         >
-          <FaArrowUp color="white" className="h-3 w-3 md:h-5 md:w-5" />
+          <FaArrowUp color="white" className={style.icon} />
         </Button>
       )}
       {!removeProductsAllProductsList && !transferProductToCurrentList && (
         <Button
           buttonIcon
           onClick={() => removeProduct(id)}
-          className="ml-auto rounded-md bg-green-950 p-2 md:p-4"
+          className={`ml-auto bg-green-950 ${style.buttonIcon}`}
         >
-          {<FaArrowDown color="white" className="h-3 w-3 md:h-5 md:w-5" />}
+          {<FaArrowDown color="white" className={style.icon} />}
         </Button>
       )}
     </div>
