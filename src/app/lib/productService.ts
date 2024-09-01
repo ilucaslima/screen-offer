@@ -2,9 +2,12 @@ import { IProduct } from '@/interface/products'
 import { productsActivated } from '../utils/products-activated'
 
 export async function fetchProducts(): Promise<IProduct[]> {
-  const response = await fetch('https://dummyjson.com/products', {
-    cache: 'no-store',
-  })
+  const response = await fetch(
+    'https://dummyjson.com/products/category/groceries',
+    {
+      cache: 'no-store',
+    },
+  )
   const data = await response.json()
   return data.products
 }
