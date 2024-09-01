@@ -38,8 +38,8 @@ export default function Home() {
       setFilteredProducts(productsFiltered)
       setAllProducts(allProducts)
     }
-    setIsLoading(false)
     fetch()
+    setIsLoading(false)
   }, [])
 
   if (isLoading) {
@@ -47,7 +47,7 @@ export default function Home() {
   }
 
   return (
-    <main className="m-auto min-h-screen max-w-screen-lg items-center justify-between p-24 text-center font-medium">
+    <main className="m-auto min-h-screen max-w-screen-lg items-center justify-between p-6 text-center font-medium md:p-24">
       <h1 className="text-3xl font-medium">Sua oferta</h1>
       <p className="font-medium">Adicione produtos a sua oferta</p>
       <Button>Adicionar produto</Button>
