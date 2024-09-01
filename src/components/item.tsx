@@ -7,7 +7,7 @@ import Button from './button'
 
 import { FaArrowDown, FaArrowUp, FaTrash } from 'react-icons/fa'
 import { IItemProps } from '@/interface/components/item'
-import { style } from '../utils/style'
+import { style } from '@/utils/style'
 
 const Item = ({
   title,

@@ -1,5 +1,5 @@
 import { IProduct } from '@/interface/products'
-import { productsActivated } from '../utils/products-activated'
+import { productsActivated } from '@/utils/products-activated'
 
 export async function fetchProducts(): Promise<IProduct[]> {
   const response = await fetch(

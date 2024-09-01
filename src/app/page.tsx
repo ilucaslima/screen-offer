@@ -1,12 +1,12 @@
 'use client'
 
 import { useEffect, useState } from 'react'
-import Button from './components/button'
-import Item from './components/item'
-import Separator from './components/separator'
-import { fetchProducts, getFilteredProducts } from './lib/productService'
+import Button from '@/components/button'
+import Item from '@/components/item'
+import Separator from '@/components/separator'
+import { fetchProducts, getFilteredProducts } from '../lib/productService'
 import { IProduct } from '@/interface/products'
-import LoadingPage from './components/loading-page'
+import LoadingPage from '@/components/loading-page'
 
 export default function Home() {
   const [filteredProducts, setFilteredProducts] = useState<IProduct[]>([])
